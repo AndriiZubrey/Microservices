@@ -15,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\KnowYourPostUsers.Data\KnowYourPostUsers.Data.csproj" />
+      <ProjectReference Include="..\KnowYourPostTaxes.Data\KnowYourPostTaxes.Data.csproj" />
     </ItemGroup>
 
 </Project>
