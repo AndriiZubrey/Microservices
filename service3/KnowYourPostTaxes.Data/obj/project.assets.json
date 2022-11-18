@@ -828,11 +828,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostUsers.Data\\KnowYourPostUsers.Data.csproj",
-      "projectName": "KnowYourPostUsers.Data",
-      "projectPath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostUsers.Data\\KnowYourPostUsers.Data.csproj",
+      "projectUniqueName": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostTaxes.Data\\KnowYourPostTaxes.Data.csproj",
+      "projectName": "KnowYourPostTaxes.Data",
+      "projectPath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostTaxes.Data\\KnowYourPostTaxes.Data.csproj",
       "packagesPath": "C:\\Users\\berli\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostUsers.Data\\obj\\",
+      "outputPath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostTaxes.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
