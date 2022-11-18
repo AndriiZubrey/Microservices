@@ -2,7 +2,7 @@
   "version": 2,
   "dgSpecHash": "g/JS+Lz3exkmu/muz1X6wqYAav7W+xR0noG+CCEThGkEcp4o0OLYGlFJz8VUXZJVARvTlgL0Lm3OeKjDZpCuGQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostUsers.Data\\KnowYourPostUsers.Data.csproj",
+  "projectFilePath": "C:\\Users\\berli\\Робочий стіл\\microservices-dev\\services\\service1\\KnowYourPostTaxes.Data\\KnowYourPostTaxes.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\berli\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\berli\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.11\\microsoft.entityframeworkcore.6.0.11.nupkg.sha512",
