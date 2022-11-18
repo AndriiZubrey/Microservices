@@ -29,18 +29,15 @@ namespace KnowYourPostTaxes.Data.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Email")
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("Password")
+                    b.Property<string>("TaxRate")
                         .IsRequired()
-                        .HasColumnType("text");
+                        .HasColumnType("decimal(4, 3)");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
 
                     b.ToTable("Taxes");
                 });
