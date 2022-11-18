@@ -20,7 +20,7 @@ namespace KnowYourPostTaxes.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Taxes", x => x.Id);
+                    table.PrimaryKey("PK_Taxes", t => t.Id);
                 });
 
         }
