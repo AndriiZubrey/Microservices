@@ -1,12 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace KnowYourPostUsers.Data;
+namespace KnowYourPostTaxes.Data;
 
-public class UserContext : DbContext
+public class TaxContext : DbContext
 {
-    public DbSet<User> Users { get; set; }
+    public DbSet<Tax> Taxes { get; set; }
     
-    public UserContext(DbContextOptions<UserContext> options) 
+    public TaxContext(DbContextOptions<TaxContext> options) 
         : base(options)
     {
     }
@@ -17,7 +17,7 @@ public class UserContext : DbContext
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.Entity<User>()
+        modelBuilder.Entity<Tax>()
             .HasIndex(e => e.Email)
             .IsUnique();
     }
