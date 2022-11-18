@@ -1,12 +1,12 @@
 using System.ComponentModel.DataAnnotations;
 using System.Text.Json.Serialization;
-using KnowYourPostUsers.Data;
+using KnowYourPostTaxes.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddDbContext<UserContext>(ops => 
+builder.Services.AddDbContext<TaxContext>(ops => 
     ops.UseNpgsql(builder.Configuration.GetSection("DbConnection").Value));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -28,37 +28,37 @@ using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
 
-    var context = services.GetRequiredService<UserContext>();
+    var context = services.GetRequiredService<TaxContext>();
     context.Database.EnsureCreated();
 }
 
-app.MapPost("/user", (UserVM user, UserContext context) =>
+app.MapPost("/tax", (TaxVM tax, TaxContext context) =>
 {
-    context.Users.Add(new User(user.Email, user.Password));
+    context.Taxes.Add(new Tax(tax.Email, tax.Password));
     context.SaveChanges();
     return Results.Ok();
 });
 
-app.MapGet("/user", (UserContext context) => 
-    context.Users.ToList());
+app.MapGet("/tax", (TaxContext context) => 
+    context.Taxes.ToList());
 
-app.MapGet("/user/{id}", (int id, UserContext context) =>
+app.MapGet("/tax/{id}", (int id, TaxContext context) =>
 {
-    var user = context.Users.Find(id);
-    return user == null ? Results.NotFound() : Results.Ok(user);
+    var tax = context.Taxes.Find(id);
+    return tax == null ? Results.NotFound() : Results.Ok(tax);
 });
 
-app.MapPost("/user/exists", (UserVM user, UserContext context) =>
+app.MapPost("/tax/exists", (TaxVM tax, TaxContext context) =>
 {
-    var exists = context.Users.Any(u => u.Email == user.Email && u.Password == user.Password);
+    var exists = context.Taxs.Any(u => u.Email == tax.Email && u.Password == tax.Password);
     return Results.Ok(exists);
 });
 
-app.MapDelete("/user/{id}", (int id, UserContext context) =>
+app.MapDelete("/tax/{id}", (int id, TaxContext context) =>
 {
-    var user = context.Users.Find(id);
-    if (user == null) return Results.NotFound();
-    context.Users.Remove(user);
+    var tax = context.Taxes.Find(id);
+    if (tax == null) return Results.NotFound();
+    context.Taxes.Remove(tax);
     context.SaveChanges();
     return Results.Ok();
 });
@@ -66,7 +66,7 @@ app.MapDelete("/user/{id}", (int id, UserContext context) =>
 app.Run();
 
 
-class UserVM
+class TaxVM
 {
     [JsonPropertyName("email")] public string Email { get; set; }
     [JsonPropertyName("password")] public string Password { get; set; }
