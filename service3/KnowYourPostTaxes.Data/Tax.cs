@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KnowYourPostTaxes.Data;
@@ -6,12 +6,6 @@ namespace KnowYourPostTaxes.Data;
 public class Tax
 {
     [Key] [DatabaseGenerated(DatabaseGeneratedOption.Identity)] public int Id { get; set; }
-    public string Email { get; set; }       // is unique
-    public string Password { get; set; }    // forbidden to store unhashed, never do this in real-life scenarios
-
-    public Tax(string email, string password)
-    {
-        Email = email;
-        Password = password;
-    }
+    public string Name { get; set; }
+    public decimal(4, 3) TaxRate { get; set; } 
 }
