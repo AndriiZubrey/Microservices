@@ -2,22 +2,22 @@
 
 #nullable disable
 
-namespace KnowYourPostUsers.Data.Migrations
+namespace KnowYourPostTaxes.Data.Migrations
 {
-    public partial class RemoveUserName : Migration
+    public partial class RemoveTaxName : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
                 name: "Name",
-                table: "Users");
+                table: "Taxes");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
                 name: "Name",
-                table: "Users",
+                table: "Taxes",
                 type: "text",
                 nullable: false,
                 defaultValue: "");
