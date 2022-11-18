@@ -4,7 +4,7 @@ namespace KnowYourPostTaxes.Data;
 
 public class TaxContext : DbContext
 {
-    public DbSet<Tax> Users { get; set; }
+    public DbSet<Tax> Taxes { get; set; }
 
     public TaxContext(DbContextOptions<TaxContext> options) 
         : base(options)
