@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowYourPostUsers", "KnowYourPostUsers.csproj", "{0C78BDC4-7E3E-4572-941A-022B33206404}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowYourPostTaxes", "KnowYourPostTaxes.csproj", "{0C78BDC4-7E3E-4572-941A-022B33206404}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowYourPostUsers.Data", "..\KnowYourPostUsers.Data\KnowYourPostUsers.Data.csproj", "{16DC5067-CD83-446B-A520-FA448F0F1647}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KnowYourPostTaxes.Data", "..\KnowYourPostTaxes.Data\KnowYourPostTaxes.Data.csproj", "{16DC5067-CD83-446B-A520-FA448F0F1647}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
